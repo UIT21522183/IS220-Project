@@ -54,27 +54,84 @@ header {
 }
 
 .navbar ul li a {
-    color: #e6e6e6;
+    color: #cccccc;
     text-align: center;
     padding: 10px 40px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
 }
-
+.navbar ul li .line {
+    border: 2px solid white;
+    visibility: hidden;
+    width: 80%;
+}
+.navbar ul li a.active {
+    color: white;
+    font-size: 16px;
+}
+.navbar ul li a.active + .line {
+    visibility: visible;
+}
 .navbar ul li a:hover {
     color: white;
     font-size: 16px;
 }
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        display: none;
+    }
+    .searchContainer{
+        flex-direction: column;
+    }
 
+}
+.searchContainer{
+    display: flex;
+}
 form {
     display: flex;
     border: 1px solid #6dd5ed;
-    width: 80%;
+    width: 70%;
     border-radius: 20px;
     flex-direction: column;
     margin-top: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.chieu {
+    display: none;
+}
+.radio-container{
+    display: flex;
+    margin-right: 10px;
+}
+.radio-container span{
+    margin-left: 5px;
+}
+.custom-radio {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #29b4d6;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-radio .inner-circle {
+    display: none;
+    position: absolute;
+    top: 20%;
+    right: 18%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.chieu:checked + .custom-radio .inner-circle {
+    display: block;
+    background-color: #29b4d6;
 }
 
 .chonThongTin {

@@ -12,6 +12,27 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Kaushan+Script&family=Montserrat:wght@300&display=swap"
         rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.chieu').change(function () {
+                console.log("chieu thay doi");
+                var isSelected = $('#2chieu').is(':checked');
+                console.log(isSelected);
+                if (isSelected)
+                    $('#ngayve').css('display', 'block');
+                else
+                    $('#ngayve').css('display', 'none');
+            })
+            $('.navbar ul li').mouseenter(function () {
+                $(this).find('.line').css('visibility', 'visible');
+            }).mouseleave(function () {
+                if (!$(this).find('a').hasClass('active'))
+                    $(this).find('.line').css('visibility', 'hidden');
+            });
+        })
+
+    </script>
 </head>
 
 <body>
@@ -28,28 +49,55 @@
         </div>
         <div class="navbar">
             <ul>
-                <li><a class="active" href="#home">Trang chủ</a></li>
-                <li><a href="#">Lịch trình</a></li>
-                <li><a href="#">Tra cứu vé</a></li>
-                <li><a href="#">Tin tức</a></li>
-                <li><a href="#">Hóa đơn</a></li>
-                <li><a href="#">Liên hệ</a></li>
-                <li><a href="#">Về chúng tôi</a></li>
+                <li>
+                    <a class="active" href="#home">Trang chủ</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Lịch trình</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Tra cứu vé</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Tin tức</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Hóa đơn</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Liên hệ</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Về chúng tôi</a>
+                    <hr class="line">
+                </li>
             </ul>
         </div>
     </header>
     <form>
         <div
-            style="display: flex; justify-content: space-between; margin-top: 20px; color: #29b4d6; font-weight: bold;">
-            <div style="margin-left: 20px;">
-                <input type="radio" name="chieu" value="1chieu" checked>Một chiều
-                <input type="radio" name="chieu" value="2chieu" checked>Khứ hồi
+            style="display: flex; justify-content: space-between; margin-top: 20px; color: #29b4d6; font-weight: bold; ">
+            <div style="margin-left: 20px; display: flex;">
+                <div class="radio-container">
+                    <input type="radio" name="chieu" class="chieu" id="1chieu" checked>
+                    <label for="1chieu" class="custom-radio">
+                        <span class="inner-circle"></span>
+                    </label>
+                    <span>Một chiều</span>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" name="chieu" class="chieu" id="2chieu">
+                    <label for="2chieu" class="custom-radio">
+                        <span class="inner-circle"></span>
+                    </label>
+                    <span>Khứ hồi</span>
+                </div>
             </div>
             <div style="margin-right: 20px;">
                 Hướng dẫn mua vé
             </div>
         </div>
-        <div style="display: flex;">
+        <div class="searchContainer">
             <div class="chonThongTin">
                 <h4>Điểm đi</h4>
                 <select name="diemdi" id="diemdi">
@@ -80,6 +128,10 @@
             </div>
             <div class="chonThongTin">
                 <h4>Ngày đi</h4>
+                <input type="date" class="selectDate">
+            </div>
+            <div class="chonThongTin" style="display: none;" id="ngayve">
+                <h4>Ngày về</h4>
                 <input type="date" class="selectDate">
             </div>
             <div class="chonThongTin">
@@ -212,15 +264,17 @@
     <div class="footer">
         <div class="leftContainer">
             <div class="h4">TRUNG TÂM TỔNG ĐÀI & CSKH</div>
-            <div style="color: #29b4d6; margin-top: 1px; font-size: large; font-weight: bold; margin-bottom: 20px;">1900 9067</div>
+            <div style="color: #29b4d6; margin-top: 1px; font-size: large; font-weight: bold; margin-bottom: 20px;">1900
+                9067</div>
             <div class="h4">CÔNG TY CỔ PHẦN XE KHÁCH PHƯƠNG TRANG - FUTA BUS LINES</div>
-            <div class="h5">Địa chỉ: <span class="black">Số 01 Tô Hiến Thành, Phường 3, Thành phố Đà Lạt, Tỉnh Lâm Đồng, Việt Nam.</span></div>
+            <div class="h5">Địa chỉ: <span class="black">Số 01 Tô Hiến Thành, Phường 3, Thành phố Đà Lạt, Tỉnh Lâm Đồng,
+                    Việt Nam.</span></div>
             <div class="h5">Email: <span style="color: #29b4d6;">hotro@futa.vn</span></div>
             <div class="h5">Số điện thoại: <span class="black">0123456789</span></div>
-        </div>            
+        </div>
         <div class="rightContainer">
             <div>
-                <div class= "h4">FUTA Bus Lines</div>
+                <div class="h4">FUTA Bus Lines</div>
                 <ul>
                     <li>Về chúng tôi</li>
                     <li>Lịch trình</li>
@@ -238,7 +292,7 @@
                     <li>Tin tức & Sự kiện</li>
                     <li>Mạng lưới văn phòng</li>
                 </ul>
-            </div>            
+            </div>
         </div>
     </div>
 </body>
