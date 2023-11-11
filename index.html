@@ -1,11 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Đặt xe</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="../lichtrinh/assets/fontawesome/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Kaushan+Script&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
+
 <body>
-    
+    <header>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin: 10px 100px;">
+            <div style="display: flex; align-items: center;">
+                <span class="fa-solid fa-bus appLogo" style="color: black; font-size: 50px;"></span>
+                <h1 style="padding-left: 10px;">Ten App</h1>
+            </div>
+            <div class="SignInUp">
+                <i class="fa-solid fa-circle-user"></i>
+                <button class="btnSignInUp">Đăng nhập/Đăng ký</button>
+            </div>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a class="active" href="#home">Trang chủ</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Lịch trình</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Tra cứu vé</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Tin tức</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Hóa đơn</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Liên hệ</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Về chúng tôi</a>
+                    <hr class="line">
+                </li>
+            </ul>
+        </div>
+    </header>
+ <form> 
+    <div >
+        <div class="searchContainer">
+            <div class="chonThongTin">
+                   <input name="diemdi" id="diemdi" placeholder="Nhập điểm đi">
+            </div>
+            <div class="chonThongTin">
+                <input name="diemdi" id="diemdi" placeholder="Nhập điểm đến">
+            </div>
+        </div>
+    </div>
+ </form>
+ <form> 
+    <div class="schedule-card1 flex w-full flex-col gap-[6px] text-left">
+        <div class="listHanhtrinh">
+            <div class="menuhanhtrinh1">
+                   Tuyến xe
+            </div>
+            <div class="menuhanhtrinh2">
+                Loại xe
+             </div>
+            <div class="menuhanhtrinh3">
+                Quảng đường    
+             </div>
+             <div class="menuhanhtrinh4">
+                Thời gian hành trình    
+             </div>
+             <div class="menuhanhtrinh5">
+                Giá vé   
+             </div>
+        </div>
+    </div>
+ </form>
+ <form> 
+    <div class="schedule-card flex w-full flex-col gap-[6px] text-left">
+        <div class="listHanhtrinh">
+            <div class="menuhanhtrinh1">
+                   <span>An Nhơn</span>
+                   <span>=></span>
+                   <span>TP Hồ Chí Minh</span>
+            </div>
+            <div class="menuhanhtrinh2">
+                Giường
+             </div>
+            <div class="menuhanhtrinh3">
+                639km    
+             </div>
+             <div class="menuhanhtrinh4">
+                11 giờ 30 phút    
+             </div>
+             <div class="menuhanhtrinh5">
+                ---   
+             </div>
+             <div class="ant-col flex justify-end" style="flex: 1 1 auto;">
+                <button type="button" class="ant-btn ant-btn-round ant-btn-default button-default mr-2">
+                    <span>Tìm tuyến xe</span>
+                </button>
+             </div>
+        </div>
+        
+        <div class="listHanhtrinh">
+            <div class="menuhanhtrinh1">
+                   <span>An Nhơn</span>
+                   <span>=></span>
+                   <span>TP Hồ Chí Minh</span>
+            </div>
+            <div class="menuhanhtrinh2">
+                Giường
+             </div>
+            <div class="menuhanhtrinh3">
+                660km    
+             </div>
+             <div class="menuhanhtrinh4">
+                13 giờ 46 phút    
+             </div>
+             <div class="menuhanhtrinh5">
+                ---   
+             </div>
+             <div class="ant-col flex justify-end" style="flex: 1 1 auto;">
+                <button type="button" class="ant-btn ant-btn-round ant-btn-default button-default mr-2">
+                    <span>Tìm tuyến xe</span>
+                </button>
+             </div>
+        </div>
+        
+    </div>
+ </form>
+ <form> 
+    <div class="schedule-card flex w-full flex-col gap-[6px] text-left">
+        <div class="listHanhtrinh">
+            <div class="menuhanhtrinh1">
+                   <span>Bạc Liêu</span>
+                   <span>=></span>
+                   <span>TP Hồ Chí Minh</span>
+            </div>
+            <div class="menuhanhtrinh2">
+                Giường
+             </div>
+            <div class="menuhanhtrinh3">
+                271km    
+             </div>
+             <div class="menuhanhtrinh4">
+                6 giờ    
+             </div>
+             <div class="menuhanhtrinh5">
+                ---   
+             </div>
+             <div class="ant-col flex justify-end" style="flex: 1 1 auto;">
+                <button type="button" class="ant-btn ant-btn-round ant-btn-default button-default mr-2">
+                    <span>Tìm tuyến xe</span>
+                </button>
+             </div>
+        </div>
+    </div>
+ </form>
+
+ <form> 
+    <div class="schedule-card flex w-full flex-col gap-[6px] text-left">
+        <div class="listHanhtrinh">
+            <div class="menuhanhtrinh1">
+                   <span>Bảo Lộc</span>
+                   <span>=></span>
+                   <span>Đà Nẵng</span>
+            </div>
+            <div class="menuhanhtrinh2">
+                Giường
+             </div>
+            <div class="menuhanhtrinh3">
+                756km    
+             </div>
+             <div class="menuhanhtrinh4">
+                16 giờ 38 phút    
+             </div>
+             <div class="menuhanhtrinh5">
+                ---   
+             </div>
+             <div class="ant-col flex justify-end" style="flex: 1 1 auto;">
+                <button type="button" class="ant-btn ant-btn-round ant-btn-default button-default mr-2">
+                    <span>Tìm tuyến xe</span>
+                </button>
+             </div>
+        </div>
+
+        <div class="listHanhtrinh">
+            <div class="menuhanhtrinh1">
+                   <span>Bảo Lộc</span>
+                   <span>=></span>
+                   <span>Huế</span>
+            </div>
+            <div class="menuhanhtrinh2">
+                Giường
+             </div>
+            <div class="menuhanhtrinh3">
+                827km    
+             </div>
+             <div class="menuhanhtrinh4">
+                19 giờ    
+             </div>
+             <div class="menuhanhtrinh5">
+                ---   
+             </div>
+             <div class="ant-col flex justify-end" style="flex: 1 1 auto;">
+                <button type="button" class="ant-btn ant-btn-round ant-btn-default button-default mr-2">
+                    <span>Tìm tuyến xe</span>
+                </button>
+             </div>
+        </div>
+
+        <div class="listHanhtrinh">
+            <div class="menuhanhtrinh1">
+                   <span>Bảo Lộc</span>
+                   <span>=></span>
+                   <span>Quảng Ngãi</span>
+            </div>
+            <div class="menuhanhtrinh2">
+                ---
+             </div>
+            <div class="menuhanhtrinh3">
+                ---    
+             </div>
+             <div class="menuhanhtrinh4">
+                    
+             </div>
+             <div class="menuhanhtrinh5">
+                ---   
+             </div>
+             <div class="ant-col flex justify-end" style="flex: 1 1 auto;">
+                <button type="button" class="ant-btn ant-btn-round ant-btn-default button-default mr-2">
+                    <span>Tìm tuyến xe</span>
+                </button>
+             </div>
+        </div>
+    </div>
+ </form>
+
+ <form> 
+    <div class="schedule-card flex w-full flex-col gap-[6px] text-left">
+        <div class="listHanhtrinh">
+            <div class="menuhanhtrinh1">
+                   <span>Bạc Liêu</span>
+                   <span>=></span>
+                   <span>TP Hồ Chí Minh</span>
+            </div>
+            <div class="menuhanhtrinh2">
+                Giường
+             </div>
+            <div class="menuhanhtrinh3">
+                271km    
+             </div>
+             <div class="menuhanhtrinh4">
+                6 giờ    
+             </div>
+             <div class="menuhanhtrinh5">
+                ---   
+             </div>
+             <div class="ant-col flex justify-end" style="flex: 1 1 auto;">
+                <button type="button" class="ant-btn ant-btn-round ant-btn-default button-default mr-2">
+                    <span>Tìm tuyến xe</span>
+                </button>
+             </div>
+
+             
+        </div>
+    </div>
+ </form>
+ 
+ <form action=""></form>
+ 
+    <div class="footer">
+        <div class="leftContainer">
+            <div class="h4">TRUNG TÂM TỔNG ĐÀI & CSKH</div>
+            <div style="color: #29b4d6; margin-top: 1px; font-size: large; font-weight: bold; margin-bottom: 20px;">1900
+                9067</div>
+            <div class="h4">CÔNG TY CỔ PHẦN XE KHÁCH PHƯƠNG TRANG - FUTA BUS LINES</div>
+            <div class="h5">Địa chỉ: <span class="black">Số 01 Tô Hiến Thành, Phường 3, Thành phố Đà Lạt, Tỉnh Lâm Đồng,
+                    Việt Nam.</span></div>
+            <div class="h5">Email: <span style="color: #29b4d6;">hotro@futa.vn</span></div>
+            <div class="h5">Số điện thoại: <span class="black">0123456789</span></div>
+        </div>
+        <div class="rightContainer">
+            <div>
+                <div class="h4">FUTA Bus Lines</div>
+                <ul>
+                    <li>Về chúng tôi</li>
+                    <li>Lịch trình</li>
+                    <li>Tuyển dụng</li>
+                    <li>Tin tức & Sự kiện</li>
+                    <li>Mạng lưới văn phòng</li>
+                </ul>
+            </div>
+            <div>
+                <div class="h4">Hỗ trợ</div>
+                <ul>
+                    <li>Về chúng tôi</li>
+                    <li>Lịch trình</li>
+                    <li>Tuyển dụng</li>
+                    <li>Tin tức & Sự kiện</li>
+                    <li>Mạng lưới văn phòng</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
