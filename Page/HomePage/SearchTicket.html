@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt xe</title>
+    <link href="/Page/HomePage/SearchTicket.css" rel="stylesheet" type="text/css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="../../assets/fontawesome/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Kaushan+Script&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.chieu').change(function () {
+                console.log("chieu thay doi");
+                var isSelected = $('#2chieu').is(':checked');
+                console.log(isSelected);
+                if (isSelected)
+                    $('#ngayve').css('display', 'block');
+                else
+                    $('#ngayve').css('display', 'none');
+            })
+            $('.navbar ul li').mouseenter(function () {
+                $(this).find('.line').css('visibility', 'visible');
+            }).mouseleave(function () {
+                if (!$(this).find('a').hasClass('active'))
+                    $(this).find('.line').css('visibility', 'hidden');
+            });
+        })
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin: 10px 100px;">
+            <div style="display: flex; align-items: center;">
+                <span class="fa-solid fa-bus appLogo" style="color: black; font-size: 50px;"></span>
+                <h1 style="padding-left: 10px;">Ten App</h1>
+            </div>
+            <div class="SignInUp">
+                <i class="fa-solid fa-circle-user"></i>
+                <button class="btnSignInUp">Đăng nhập/Đăng ký</button>
+            </div>
+            <script>
+                // Sử dụng querySelector để lấy phần tử đầu tiên có lớp SignInUp
+               let signInUp = document.querySelector(".SignInUp");
+               signInUp.onclick = function() {
+                   // Chuyển đến trang đăng nhập/đăng ký
+                 window.location.href = "/Page/SignIn-SignUp/sign_in.html"; 
+               };
+             </script>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a  href="/Page/HomePage/HomePage.html">Trang chủ</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Lịch trình</a>
+                    <hr class="line">
+                </li>
+                <li><a class="active" href="/Page/HomePage/SearchTicket.css">Tra cứu vé</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Tin tức</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Hóa đơn</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Liên hệ</a>
+                    <hr class="line">
+                </li>
+                <li><a href="#">Về chúng tôi</a>
+                    <hr class="line">
+                </li>
+            </ul>
+        </div>
+    </header>
+
+        <div class="layout">
+            <div class="mt-8">
+                <h1>TRA CỨU THÔNG TIN ĐẶT VÉ</h1>
+                <div class="ant-tabs">
+                    <div class="ant-tabs-nav-list">
+                        </div>
+                    </div>
+                    <form>
+                        <div class="ant-form-item-control-input-content">
+                            <span class="ant-input-affix-wrapper">
+                                <input type="text" placeholder="Vui lòng nhập số điện thoại" required>
+                            </span>
+                        </div>
+                        <div class="ant-form-item-control-input-content">
+                            <span class="ant-input-affix-wrapper">
+                                <span class="ant-input-prefix">
+                                </span>
+                                <input type="text" placeholder="Vui lòng nhập mã vé" required>
+                                <span class="ant-input-prefix">
+                                </span>
+                            </span>
+                        </div>
+                        <button>Tra cứu</button>
+                    </form>
+                </div> 
+            </div>
+        </div>
+       
+
+
+    <div class="footer">
+        <div class="leftContainer">
+            <div class="h4">TRUNG TÂM TỔNG ĐÀI & CSKH</div>
+            <div style="color: #29b4d6; margin-top: 1px; font-size: large; font-weight: bold; margin-bottom: 20px;">1900
+                9067</div>
+            <div class="h4">CÔNG TY CỔ PHẦN XE KHÁCH PHƯƠNG TRANG - FUTA BUS LINES</div>
+            <div class="h5">Địa chỉ: <span class="black">Số 01 Tô Hiến Thành, Phường 3, Thành phố Đà Lạt, Tỉnh Lâm Đồng,
+                    Việt Nam.</span></div>
+            <div class="h5">Email: <span style="color: #29b4d6;">hotro@futa.vn</span></div>
+            <div class="h5">Số điện thoại: <span class="black">0123456789</span></div>
+        </div>
+        <div class="rightContainer">
+            <div>
+                <div class="h4">FUTA Bus Lines</div>
+                <ul>
+                    <li>Về chúng tôi</li>
+                    <li>Lịch trình</li>
+                    <li>Tuyển dụng</li>
+                    <li>Tin tức & Sự kiện</li>
+                    <li>Mạng lưới văn phòng</li>
+                </ul>
+            </div>
+            <div>
+                <div class="h4">Hỗ trợ</div>
+                <ul>
+                    <li>Về chúng tôi</li>
+                    <li>Lịch trình</li>
+                    <li>Tuyển dụng</li>
+                    <li>Tin tức & Sự kiện</li>
+                    <li>Mạng lưới văn phòng</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
