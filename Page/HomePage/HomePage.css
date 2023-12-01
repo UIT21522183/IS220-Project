@@ -14,7 +14,15 @@ header {
     display: flex;
     flex-direction: column;
 }
-
+.appName{
+    padding-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+}
+.appName:hover{
+}
 .SignInUp {
     border-radius: 20px;
     background-color: white;
